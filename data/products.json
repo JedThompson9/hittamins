@@ -1,0 +1,195 @@
+[
+  {
+    "id": "beating-black-blue",
+    "name": "Beating Black & Blue",
+    "subtitle": "Witch Hazel Muscle Rub",
+    "slug": "beating-black-blue",
+    "category": "Muscle Recovery",
+    "price": 39.99,
+    "image": "/products/beating-black-blue.jpg",
+    "marketingImage": "/products/beating-black-blue-marketing.jpg",
+    "imagePosition": "center 60%",
+    "shortDescription": "Natural relief. Real recovery. A witch hazel based muscle rub for bruising, soreness and skin recovery.",
+    "longDescription": "Beating Black & Blue is a witch hazel based muscle rub formulated for fighters, athletes and anyone who pushes their body hard. Rub it in. Relieve. Recover.",
+    "colour": "#3ECFCF",
+    "perfectFor": ["Boxers", "Gym Goers", "Runners", "Labourers", "Everyday Aches & Pains"],
+    "ingredients": [
+      {
+        "name": "Witch Hazel",
+        "description": "A plant-derived astringent with potent anti-inflammatory and antiviral properties used to control swelling, reduce bruising, and calm skin."
+      },
+      {
+        "name": "Arnica",
+        "description": "A natural plant-derived treatment traditionally used as a topical balm for bruising, sprains, and muscle pain."
+      },
+      {
+        "name": "Aloe Vera Gel",
+        "description": "A lightweight, non-greasy botanical extract used topically for its cooling, hydrating, and anti-inflammatory properties."
+      },
+      {
+        "name": "Shea Butter",
+        "description": "Moisturises and nourishes the skin without feeling greasy."
+      },
+      {
+        "name": "European Olive Oil",
+        "description": "An emollient and antioxidant that helps lock in moisture and deliver active ingredients effectively."
+      },
+      {
+        "name": "Panthenol (Pro Vitamin B5)",
+        "description": "A versatile, moisturising derivative of Vitamin B5 used for its soothing, hydrating, and barrier-repairing properties. Supports skin repair and helps strengthen the skin barrier."
+      }
+    ]
+  },
+  {
+    "id": "off-the-ropes",
+    "name": "Off The Ropes",
+    "subtitle": "Pre-Workout Shot",
+    "slug": "off-the-ropes",
+    "category": "Pre-Workout",
+    "price": 49.99,
+    "image": null,
+    "marketingImage": null,
+    "shortDescription": "Clean energy without the crash. Sharp focus and mental clarity. Power and performance when it matters.",
+    "longDescription": "When you're drained but your goals aren't — get Off The Ropes. A pre-workout shot built for boxing, combat sports, gym training, and long days.",
+    "colour": "#1A8FFF",
+    "perfectFor": ["Boxers", "Gym Goers", "Runners", "Long Days. Big Goals."],
+    "ingredients": [
+      {
+        "name": "Caffeine",
+        "description": "A proven stimulant and energiser that boosts energy, enhances cognitive focus, and provides antioxidants that support metabolic health."
+      },
+      {
+        "name": "Guarana Extract",
+        "description": "A natural source of caffeine that supports boosting energy, endurance, and resistance to fatigue."
+      },
+      {
+        "name": "Ginseng Extract",
+        "description": "Supports energy, focus, and resistance to fatigue."
+      },
+      {
+        "name": "Riboflavin (Vitamin B2)",
+        "description": "Vital for the formation of red blood cells, neurological function, and DNA synthesis."
+      },
+      {
+        "name": "Vitamin B6",
+        "description": "Metabolises proteins, fats, and carbohydrates, creates red blood cells, and builds neurotransmitters like serotonin and dopamine."
+      },
+      {
+        "name": "Vitamin B12",
+        "description": "Helps your body convert carbohydrates into usable cellular energy (ATP) and supports red blood cell production for oxygen transport."
+      },
+      {
+        "name": "L-Arginine & L-Citrulline Complex",
+        "description": "Amino acids that support nitric oxide production to help increase blood flow, lower blood pressure, and enhance athletic performance and muscle recovery."
+      },
+      {
+        "name": "Beta-Alanine",
+        "description": "A non-essential amino acid that buffers acid in muscles during high-intensity exercise to improve performance and delay fatigue in bursts lasting 1 to 10 minutes."
+      },
+      {
+        "name": "Creatine Monohydrate",
+        "description": "The most researched and effective sports supplement in the world. Scientifically proven to boost strength, increase power, and enhance muscle performance during high-intensity training."
+      },
+      {
+        "name": "Ascorbic Acid (Vitamin C)",
+        "description": "Contributes to normal collagen formation, plays a key role in the function of skin, bones, teeth, and cartilage, and is essential for protecting cells and supporting immunity."
+      }
+    ]
+  },
+  {
+    "id": "caffeine-berry-fizzy",
+    "name": "Caffeine Berry Fizzy",
+    "subtitle": "Energy Drink Mix",
+    "slug": "caffeine-berry-fizzy",
+    "category": "Pre-Workout",
+    "price": 34.99,
+    "image": null,
+    "shortDescription": "A berry-flavoured caffeine fizzy drink mix for clean, sustained energy.",
+    "longDescription": "The Caffeine Berry Fizzy is a flavoured energy drink mix designed to fuel your training with clean stimulants and B vitamins.",
+    "colour": "#CC2200",
+    "perfectFor": ["Gym Goers", "Runners", "Long Days. Big Goals."],
+    "ingredients": [
+      {
+        "name": "Caffeine",
+        "description": "A proven stimulant and energiser for boosting energy, enhancing cognitive focus, and providing antioxidants that support metabolic health."
+      },
+      {
+        "name": "Guarana Extract",
+        "description": "Boosts energy, endurance, and resistance to fatigue."
+      },
+      {
+        "name": "Ginseng Extract",
+        "description": "Supports energy, focus, and resistance to fatigue."
+      },
+      {
+        "name": "Riboflavin (Vitamin B2)",
+        "description": "Vital for the formation of red blood cells, neurological function, and DNA synthesis."
+      },
+      {
+        "name": "Vitamin B6",
+        "description": "Metabolises proteins, fats, and carbohydrates, and supports neurotransmitter production."
+      },
+      {
+        "name": "Vitamin B12",
+        "description": "Helps convert carbohydrates into usable cellular energy (ATP) and supports red blood cell production."
+      }
+    ]
+  },
+  {
+    "id": "4-him-her-creatine",
+    "name": "4 Him & Her Creatine Monohydrate",
+    "subtitle": "Pure Creatine Powder",
+    "slug": "4-him-her-creatine",
+    "category": "Vitamins & Supplements",
+    "price": 44.99,
+    "image": null,
+    "shortDescription": "500g of pure creatine monohydrate. 147 servings. The most researched supplement in the world.",
+    "longDescription": "Creatine monohydrate is the most researched and effective sports supplement in the world. Scientifically proven to boost strength, increase power, and enhance muscle performance during high-intensity training.",
+    "colour": "#8FBF8F",
+    "perfectFor": ["Gym Goers", "Boxers", "Runners"],
+    "ingredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "description": "The most researched and effective sports supplement in the world. Scientifically proven to boost strength, increase power, and enhance muscle performance during high-intensity training."
+      }
+    ]
+  },
+  {
+    "id": "beta-alanine-capsules",
+    "name": "Beta-Alanine Capsules",
+    "subtitle": "Amino Acid Performance",
+    "slug": "beta-alanine-capsules",
+    "category": "Vitamins & Supplements",
+    "price": 29.99,
+    "image": null,
+    "shortDescription": "120 caps of beta-alanine to delay muscle fatigue and push harder in high-intensity sessions.",
+    "longDescription": "Beta-alanine is a non-essential amino acid used by the body to produce carnosine, which buffers acid in muscles during high-intensity exercise.",
+    "colour": "#8FBF8F",
+    "perfectFor": ["Gym Goers", "Boxers", "Runners"],
+    "ingredients": [
+      {
+        "name": "Beta-Alanine",
+        "description": "A non-essential amino acid that buffers acid in muscles during high-intensity exercise. Primarily taken by athletes to improve performance and delay fatigue in bursts lasting 1 to 10 minutes."
+      }
+    ]
+  },
+  {
+    "id": "ascorbic-acid-vitamin-c",
+    "name": "Peak Supps Ascorbic Acid",
+    "subtitle": "Pure Vitamin C Powder",
+    "slug": "ascorbic-acid-vitamin-c",
+    "category": "Vitamins & Supplements",
+    "price": 24.99,
+    "image": null,
+    "shortDescription": "1000g of pure Vitamin C (ascorbic acid) powder. Supports collagen, immunity, and cell protection.",
+    "longDescription": "Ascorbic acid (Vitamin C) contributes to normal collagen formation and plays a key role in the function of skin, bones, teeth, and cartilage. Essential for protecting cells and supporting immunity.",
+    "colour": "#8FBF8F",
+    "perfectFor": ["Gym Goers", "Runners", "Everyday Aches & Pains"],
+    "ingredients": [
+      {
+        "name": "Ascorbic Acid (Vitamin C)",
+        "description": "Contributes to normal collagen formation, plays a key role in the function of skin, bones, teeth, and cartilage, and is essential for protecting cells and supporting immunity."
+      }
+    ]
+  }
+]
