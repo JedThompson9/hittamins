@@ -27,29 +27,29 @@ export default function ProductDetailPage({ params }) {
   const related = products.filter((p) => p.id !== product.id).slice(0, 2)
 
   return (
-    <main className="min-h-screen bg-hittamins-black pt-32 pb-24">
+    <main className="min-h-screen bg-brand-light pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 font-mono text-xs text-hittamins-muted mb-12">
-          <Link href="/" className="hover:text-hittamins-text transition-colors">Home</Link>
+        <nav className="flex items-center gap-2 font-mono text-xs text-brand-muted mb-12">
+          <Link href="/" className="hover:text-brand-text transition-colors">Home</Link>
           <span>/</span>
-          <Link href="/products" className="hover:text-hittamins-text transition-colors">Products</Link>
+          <Link href="/products" className="hover:text-brand-text transition-colors">Products</Link>
           <span>/</span>
-          <span className="text-hittamins-text">{product.name}</span>
+          <span className="text-brand-text">{product.name}</span>
         </nav>
 
         {/* Product hero — two column */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
           {/* Image */}
           <div
-            className="aspect-square relative border border-hittamins-border overflow-hidden"
-            style={{ background: `linear-gradient(135deg, #111 0%, ${product.colour}22 100%)` }}
+            className="aspect-square relative border border-brand-border overflow-hidden"
+            style={{ background: `linear-gradient(135deg, #EAF2F8 0%, ${product.colour}22 100%)` }}
           >
             {/* Coloured glow behind image */}
             <div
               className="absolute inset-0 pointer-events-none z-0"
               style={{
-                background: `radial-gradient(circle at center, ${product.colour}28, transparent 65%)`,
+                background: `radial-gradient(circle at center, ${product.colour}20, transparent 65%)`,
               }}
             />
             {product.image ? (
@@ -66,7 +66,7 @@ export default function ProductDetailPage({ params }) {
               <div className="absolute inset-0 flex items-center justify-center z-10">
                 <span
                   className="font-display text-center px-8 leading-tight text-[clamp(2.5rem,6vw,6rem)]"
-                  style={{ color: product.colour + '60' }}
+                  style={{ color: product.colour + '80' }}
                 >
                   {product.name.toUpperCase()}
                 </span>
@@ -78,14 +78,14 @@ export default function ProductDetailPage({ params }) {
           <div className="flex flex-col justify-center">
             <CategoryBadge category={product.category} colour={product.colour} />
 
-            <h1 className="font-display text-[clamp(3rem,6vw,6rem)] leading-none text-hittamins-text mt-4 mb-2">
+            <h1 className="font-display text-[clamp(3rem,6vw,6rem)] leading-none text-brand-navy mt-4 mb-2">
               {product.name}
             </h1>
-            <p className="font-mono text-xs text-hittamins-muted tracking-widest mb-6">
+            <p className="font-mono text-xs text-brand-muted tracking-widest mb-6">
               {product.subtitle}
             </p>
 
-            <p className="text-hittamins-muted leading-relaxed mb-6 text-base">
+            <p className="text-brand-text leading-relaxed mb-6 text-base">
               {product.longDescription}
             </p>
 
@@ -97,9 +97,9 @@ export default function ProductDetailPage({ params }) {
             <AddToCartButton product={product} />
 
             {/* Trust signals */}
-            <div className="flex flex-wrap gap-4 mt-8 pt-6 border-t border-hittamins-border">
+            <div className="flex flex-wrap gap-4 mt-8 pt-6 border-t border-brand-border">
               {['Natural Ingredients', 'Made for Athletes', 'Real Recovery'].map((t) => (
-                <span key={t} className="font-mono text-[10px] tracking-widest text-hittamins-muted uppercase">
+                <span key={t} className="font-mono text-[10px] tracking-widest text-brand-muted uppercase">
                   ✓ {t}
                 </span>
               ))}
@@ -110,12 +110,12 @@ export default function ProductDetailPage({ params }) {
         {/* Perfect For */}
         {product.perfectFor && product.perfectFor.length > 0 && (
           <div className="mb-24">
-            <p className="font-mono text-xs tracking-widest text-hittamins-muted uppercase mb-8">
+            <p className="font-mono text-xs tracking-widest text-brand-muted uppercase mb-8">
               Perfect For
             </p>
             <div className="flex flex-wrap gap-6 md:gap-12">
               {product.perfectFor.map((label) => (
-                <span key={label} className="font-mono text-sm text-hittamins-text border-b border-hittamins-border pb-1">
+                <span key={label} className="font-mono text-sm text-brand-text border-b border-brand-border pb-1">
                   {label}
                 </span>
               ))}
@@ -125,7 +125,7 @@ export default function ProductDetailPage({ params }) {
 
         {/* Key Ingredients */}
         <div className="mb-24">
-          <h2 className="font-display text-5xl md:text-7xl text-hittamins-text mb-12">
+          <h2 className="font-display text-5xl md:text-7xl text-brand-navy mb-12">
             WHAT'S INSIDE
           </h2>
           <div className="max-w-2xl">
@@ -136,7 +136,7 @@ export default function ProductDetailPage({ params }) {
         {/* Related Products */}
         {related.length > 0 && (
           <div>
-            <h2 className="font-display text-5xl md:text-7xl text-hittamins-text mb-12">
+            <h2 className="font-display text-5xl md:text-7xl text-brand-navy mb-12">
               YOU MIGHT ALSO LIKE
             </h2>
             <RelatedProducts products={related} />

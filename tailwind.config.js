@@ -7,17 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        hittamins: {
-          black: '#0A0A0A',
-          dark: '#1A1A1A',
-          green: '#8FBF8F',
-          'dark-green': '#1C2A1C',
-          cyan: '#3ECFCF',
-          blue: '#1A8FFF',
-          text: '#F0F0F0',
-          muted: '#888888',
-          red: '#CC2200',
-          border: '#2A2A2A',
+        brand: {
+          mint: '#8FBF8F',
+          blue: '#4A90C4',
+          navy: '#1A3A5C',
+          sky: '#6AAFCF',
+          teal: '#5BA8A0',
+          light: '#F4F8FB',
+          soft: '#EAF2F8',
+          border: '#C8DFF0',
+          muted: '#6B8FAA',
+          text: '#1A2D3D',
+          white: '#FFFFFF',
         },
       },
       fontFamily: {

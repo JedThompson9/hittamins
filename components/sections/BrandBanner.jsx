@@ -48,14 +48,13 @@ export default function BrandBanner() {
   return (
     <section
       ref={bannerRef}
-      className="py-24 px-6 text-center border-t border-hittamins-border"
-      style={{ backgroundColor: '#1C2A1C' }}
+      className="py-24 px-6 text-center bg-brand-navy border-t border-brand-border"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="banner-text font-display text-[clamp(4rem,12vw,12rem)] leading-none text-hittamins-green mb-6">
+        <h2 className="banner-text font-display text-[clamp(4rem,12vw,12rem)] leading-none text-brand-mint mb-6">
           WHATEVER FEELS RIGHT
         </h2>
-        <p className="banner-sub font-mono text-sm text-hittamins-muted tracking-widest max-w-md mx-auto uppercase">
+        <p className="banner-sub font-mono text-sm text-white/60 tracking-widest max-w-md mx-auto uppercase">
           Hittamins — Recovery for fighters, workers, and everyone in between.
         </p>
       </div>

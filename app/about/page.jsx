@@ -59,42 +59,42 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <main ref={pageRef} className="min-h-screen bg-hittamins-black pt-32 pb-24 px-6">
+    <main ref={pageRef} className="min-h-screen bg-brand-light pt-32 pb-24 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
         <div className="mb-16">
-          <p className="font-mono text-xs tracking-widest text-hittamins-muted uppercase mb-4">About</p>
-          <h1 className="about-title font-display text-[clamp(4rem,12vw,10rem)] leading-none text-hittamins-text">
+          <p className="font-mono text-xs tracking-widest text-brand-muted uppercase mb-4">About</p>
+          <h1 className="about-title font-display text-[clamp(4rem,12vw,10rem)] leading-none text-brand-navy">
             HITTAMINS
           </h1>
         </div>
 
         {/* Main copy */}
-        <div className="about-body space-y-6 mb-24 border-l-2 border-hittamins-green pl-8">
-          <p className="text-hittamins-text text-xl leading-relaxed">
+        <div className="about-body space-y-6 mb-24 border-l-2 border-brand-mint pl-8">
+          <p className="text-brand-text text-xl leading-relaxed">
             Hittamins was built for the people who push their bodies hard and need real recovery — not marketing fluff.
           </p>
-          <p className="text-hittamins-muted text-base leading-relaxed">
+          <p className="text-brand-muted text-base leading-relaxed">
             We're not a lab in a sterile white room. We're a brand built around the gym, the ring, the track, and the job site. Every product we make is designed around one question: does this actually help you recover and perform?
           </p>
-          <p className="text-hittamins-muted text-base leading-relaxed">
+          <p className="text-brand-muted text-base leading-relaxed">
             Our approach is simple: natural ingredients, honest formulations, and products that do what they say.
           </p>
-          <p className="font-display text-4xl text-hittamins-green">
+          <p className="font-display text-4xl text-brand-blue">
             WHATEVER FEELS RIGHT.
           </p>
         </div>
 
         {/* Values */}
         <div className="values-section">
-          <h2 className="font-display text-5xl text-hittamins-text mb-12">OUR APPROACH</h2>
-          <div className="space-y-0 divide-y divide-hittamins-border border-t border-hittamins-border">
+          <h2 className="font-display text-5xl text-brand-navy mb-12">OUR APPROACH</h2>
+          <div className="space-y-0 divide-y divide-brand-border border-t border-brand-border">
             {VALUES.map((v) => (
               <div key={v.year} className="value-item py-8 flex gap-8">
-                <span className="font-mono text-xs text-hittamins-muted mt-1 flex-shrink-0">{v.year}</span>
+                <span className="font-mono text-xs text-brand-muted mt-1 flex-shrink-0">{v.year}</span>
                 <div>
-                  <h3 className="font-display text-3xl text-hittamins-text mb-2">{v.label.toUpperCase()}</h3>
-                  <p className="text-hittamins-muted text-sm leading-relaxed">{v.body}</p>
+                  <h3 className="font-display text-3xl text-brand-navy mb-2">{v.label.toUpperCase()}</h3>
+                  <p className="text-brand-muted text-sm leading-relaxed">{v.body}</p>
                 </div>
               </div>
             ))}

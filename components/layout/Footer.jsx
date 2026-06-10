@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-hittamins-dark border-t border-hittamins-border">
+    <footer className="bg-brand-navy border-t border-brand-border">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
@@ -17,14 +17,14 @@ export default function Footer() {
                 className="object-contain h-16 w-auto"
               />
             </div>
-            <p className="font-mono text-xs text-hittamins-muted tracking-widest uppercase">
+            <p className="font-mono text-xs text-brand-mint tracking-widest uppercase">
               Whatever Feels Right
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <p className="font-mono text-xs text-hittamins-muted tracking-widest uppercase mb-4">Navigate</p>
+            <p className="font-mono text-xs text-brand-mint tracking-widest uppercase mb-4">Navigate</p>
             <div className="flex flex-col gap-3">
               {[
                 { href: '/products', label: 'Products' },
@@ -35,7 +35,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-hittamins-muted hover:text-hittamins-text transition-colors text-sm"
+                  className="text-white/70 hover:text-white transition-colors text-sm"
                 >
                   {link.label}
                 </Link>
@@ -45,13 +45,13 @@ export default function Footer() {
 
           {/* Socials */}
           <div>
-            <p className="font-mono text-xs text-hittamins-muted tracking-widest uppercase mb-4">Follow</p>
+            <p className="font-mono text-xs text-brand-mint tracking-widest uppercase mb-4">Follow</p>
             <div className="flex flex-col gap-3">
               {[
                 { label: '@hittamins', platform: 'Instagram' },
                 { label: '@hittamins', platform: 'TikTok' },
               ].map((s) => (
-                <span key={s.platform} className="text-hittamins-muted text-sm">
+                <span key={s.platform} className="text-white/70 text-sm">
                   {s.platform} — {s.label}
                 </span>
               ))}
@@ -59,11 +59,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-hittamins-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-mono text-xs text-hittamins-muted">
+        <div className="mt-12 pt-8 border-t border-brand-border flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="font-mono text-xs text-white/50">
             &copy; {new Date().getFullYear()} Hittamins. All rights reserved.
           </p>
-          <p className="font-mono text-xs text-hittamins-muted">
+          <p className="font-mono text-xs text-white/50">
             Recovery for fighters, workers, and everyone in between.
           </p>
         </div>

@@ -30,11 +30,11 @@ export default function IngredientList({ ingredients, accentColour = '#8FBF8F' }
   }, [])
 
   return (
-    <div ref={listRef} className="space-y-5">
+    <div ref={listRef} className="space-y-2">
       {ingredients.map((ingredient) => (
         <div
           key={ingredient.name}
-          className="ingredient-item border-b border-hittamins-border pb-5 last:border-0 last:pb-0"
+          className="ingredient-item bg-brand-soft rounded px-4 py-4 border border-brand-border mb-2 last:mb-0"
         >
           <h4
             className="font-mono text-xs tracking-widest uppercase font-bold mb-2"
@@ -42,7 +42,7 @@ export default function IngredientList({ ingredients, accentColour = '#8FBF8F' }
           >
             {ingredient.name}
           </h4>
-          <p className="text-hittamins-muted text-sm leading-relaxed">{ingredient.description}</p>
+          <p className="text-brand-text text-sm leading-relaxed">{ingredient.description}</p>
         </div>
       ))}
     </div>

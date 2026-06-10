@@ -31,9 +31,9 @@ export default function BuiltForSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-hittamins-black border-t border-hittamins-border">
+    <section ref={sectionRef} className="py-24 px-6 bg-brand-soft border-t border-brand-border">
       <div className="max-w-7xl mx-auto text-center">
-        <p className="built-for-heading font-mono text-xs tracking-widest text-hittamins-muted uppercase mb-12">
+        <p className="built-for-heading font-mono text-xs tracking-widest text-brand-muted uppercase mb-12">
           Built For
         </p>
         <BuiltForIcons />

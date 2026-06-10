@@ -78,14 +78,14 @@ export default function ProductsPage() {
   }, [])
 
   return (
-    <main ref={sectionRef} className="min-h-screen bg-hittamins-black pt-32 pb-24">
+    <main ref={sectionRef} className="min-h-screen bg-brand-light pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="mb-12">
-          <p className="font-mono text-xs tracking-widest text-hittamins-muted uppercase mb-3">
+          <p className="font-mono text-xs tracking-widest text-brand-muted uppercase mb-3">
             Hittamins Range
           </p>
-          <h1 className="products-title font-display text-[clamp(4rem,12vw,10rem)] leading-none text-hittamins-text">
+          <h1 className="products-title font-display text-[clamp(4rem,12vw,10rem)] leading-none text-brand-navy">
             PRODUCTS
           </h1>
         </div>
@@ -98,8 +98,8 @@ export default function ProductsPage() {
               onClick={() => setActiveCategory(cat)}
               className={`filter-btn font-mono text-[10px] tracking-widest uppercase px-5 py-2.5 border transition-all duration-200 ${
                 activeCategory === cat
-                  ? 'bg-hittamins-green border-hittamins-green text-hittamins-black'
-                  : 'border-hittamins-border text-hittamins-muted hover:border-hittamins-green hover:text-hittamins-green'
+                  ? 'bg-brand-blue border-brand-blue text-white'
+                  : 'border-brand-border text-brand-muted hover:border-brand-blue hover:text-brand-blue'
               }`}
             >
               {cat}

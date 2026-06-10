@@ -18,7 +18,7 @@ function VisaBadge() {
 
 function MastercardBadge() {
   return (
-    <div className="relative flex items-center justify-center w-12 h-7 bg-[#1A1A1A] border border-hittamins-border rounded overflow-hidden flex-shrink-0">
+    <div className="relative flex items-center justify-center w-12 h-7 bg-white border border-brand-border rounded overflow-hidden flex-shrink-0">
       <div className="absolute left-1.5 w-4 h-4 rounded-full bg-[#EB001B]" />
       <div className="absolute right-1.5 w-4 h-4 rounded-full bg-[#F79E1B] mix-blend-screen" />
     </div>
@@ -44,7 +44,7 @@ function ApplePayBadge() {
 
 function GooglePayBadge() {
   return (
-    <div className="flex items-center justify-center w-12 h-7 bg-white rounded px-1">
+    <div className="flex items-center justify-center w-12 h-7 bg-white rounded px-1 border border-brand-border">
       <span className="font-bold text-[10px]">
         <span className="text-[#4285F4]">G</span>
         <span className="text-[#EA4335]">o</span>
@@ -93,16 +93,16 @@ const PAYMENT_OPTIONS = [
 function PaymentModal({ available, selected, onSelect, onClose }) {
   return (
     <div
-      className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-6"
+      className="fixed inset-0 bg-brand-navy/50 backdrop-blur-sm z-50 flex items-center justify-center p-6"
       onClick={onClose}
     >
       <div
-        className="bg-hittamins-dark border border-hittamins-border w-full max-w-sm"
+        className="bg-brand-white border border-brand-border w-full max-w-sm"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="px-6 py-5 border-b border-hittamins-border flex items-center justify-between">
-          <h3 className="font-display text-2xl text-hittamins-text">CHOOSE PAYMENT TYPE</h3>
-          <button onClick={onClose} className="text-hittamins-muted hover:text-hittamins-text transition-colors">
+        <div className="px-6 py-5 border-b border-brand-border flex items-center justify-between">
+          <h3 className="font-display text-2xl text-brand-navy">CHOOSE PAYMENT TYPE</h3>
+          <button onClick={onClose} className="text-brand-muted hover:text-brand-text transition-colors">
             <X size={18} />
           </button>
         </div>
@@ -114,20 +114,20 @@ function PaymentModal({ available, selected, onSelect, onClose }) {
               onClick={() => { onSelect(opt.id); onClose() }}
               className={`w-full flex items-center gap-4 px-4 py-4 border transition-all duration-150 text-left ${
                 selected === opt.id
-                  ? 'border-hittamins-cyan bg-hittamins-cyan/5'
-                  : 'border-hittamins-border hover:border-white/30'
+                  ? 'border-brand-blue bg-brand-soft'
+                  : 'border-brand-border hover:border-brand-navy/30'
               }`}
             >
               <div className="flex items-center gap-2 flex-shrink-0">
                 {opt.badges}
               </div>
               <div className="flex-1">
-                <p className="font-display text-xl text-hittamins-text leading-tight">{opt.label}</p>
-                <p className="font-mono text-[10px] text-hittamins-muted mt-0.5">{opt.description}</p>
+                <p className="font-display text-xl text-brand-navy leading-tight">{opt.label}</p>
+                <p className="font-mono text-[10px] text-brand-muted mt-0.5">{opt.description}</p>
               </div>
               {selected === opt.id && (
-                <div className="w-4 h-4 rounded-full border-2 border-hittamins-cyan flex items-center justify-center flex-shrink-0">
-                  <div className="w-2 h-2 rounded-full bg-hittamins-cyan" />
+                <div className="w-4 h-4 rounded-full border-2 border-brand-blue flex items-center justify-center flex-shrink-0">
+                  <div className="w-2 h-2 rounded-full bg-brand-blue" />
                 </div>
               )}
             </button>
@@ -137,7 +137,7 @@ function PaymentModal({ available, selected, onSelect, onClose }) {
         <div className="px-6 pb-5">
           <button
             onClick={onClose}
-            className="w-full py-3 font-mono text-xs tracking-widest text-hittamins-muted border border-hittamins-border hover:border-white/30 hover:text-hittamins-text transition-colors uppercase"
+            className="w-full py-3 font-mono text-xs tracking-widest text-brand-muted border border-brand-border hover:border-brand-navy/30 hover:text-brand-text transition-colors uppercase"
           >
             Cancel
           </button>
@@ -150,7 +150,7 @@ function PaymentModal({ available, selected, onSelect, onClose }) {
 // ── Input style ──────────────────────────────────────────────────────────────
 
 const inputClass =
-  'w-full bg-hittamins-black border border-hittamins-border px-4 py-3 font-mono text-sm text-hittamins-text placeholder:text-hittamins-muted/40 focus:outline-none focus:border-hittamins-green transition-colors'
+  'w-full bg-white border border-brand-border px-4 py-3 font-mono text-sm text-brand-text placeholder:text-brand-muted/40 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-colors'
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
@@ -212,15 +212,15 @@ export default function CheckoutPage() {
 
   if (submitted) {
     return (
-      <main className="min-h-screen bg-hittamins-black flex flex-col items-center justify-center px-6 pt-24 text-center">
-        <div className="w-20 h-20 rounded-full border-2 border-hittamins-green flex items-center justify-center mb-8">
-          <span className="text-hittamins-green text-4xl font-bold">✓</span>
+      <main className="min-h-screen bg-brand-light flex flex-col items-center justify-center px-6 pt-24 text-center">
+        <div className="w-20 h-20 rounded-full border-2 border-brand-mint flex items-center justify-center mb-8">
+          <span className="text-brand-blue text-4xl font-bold">✓</span>
         </div>
-        <h1 className="font-display text-7xl text-hittamins-text mb-4">ORDER CONFIRMED</h1>
-        <p className="font-mono text-sm text-hittamins-muted mb-10 max-w-sm">
+        <h1 className="font-display text-7xl text-brand-navy mb-4">ORDER CONFIRMED</h1>
+        <p className="font-mono text-sm text-brand-muted mb-10 max-w-sm">
           Thanks for your order. We'll send shipping details to {form.email || 'your email'}.
         </p>
-        <Link href="/" className="font-display text-2xl px-10 py-4 bg-hittamins-green text-black hover:opacity-80 transition-opacity">
+        <Link href="/" className="font-display text-2xl px-10 py-4 bg-brand-blue text-white hover:opacity-80 transition-opacity">
           BACK TO HOME
         </Link>
       </main>
@@ -229,9 +229,9 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <main className="min-h-screen bg-hittamins-black flex flex-col items-center justify-center px-6 pt-24 text-center">
-        <h1 className="font-display text-6xl text-hittamins-muted mb-6">NOTHING TO CHECK OUT</h1>
-        <Link href="/products" className="font-display text-2xl px-8 py-4 bg-hittamins-green text-black hover:opacity-80 transition-opacity">
+      <main className="min-h-screen bg-brand-light flex flex-col items-center justify-center px-6 pt-24 text-center">
+        <h1 className="font-display text-6xl text-brand-muted mb-6">NOTHING TO CHECK OUT</h1>
+        <Link href="/products" className="font-display text-2xl px-8 py-4 bg-brand-blue text-white hover:opacity-80 transition-opacity">
           SHOP PRODUCTS
         </Link>
       </main>
@@ -239,7 +239,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <main className="min-h-screen bg-hittamins-black pt-32 pb-24 px-6">
+    <main className="min-h-screen bg-brand-light pt-32 pb-24 px-6">
       {/* Payment type modal */}
       {showPaymentModal && (
         <PaymentModal
@@ -252,10 +252,10 @@ export default function CheckoutPage() {
 
       <div className="max-w-6xl mx-auto">
         <div className="mb-10">
-          <Link href="/cart" className="inline-flex items-center gap-2 font-mono text-xs tracking-widest text-hittamins-muted hover:text-hittamins-text transition-colors uppercase mb-4">
+          <Link href="/cart" className="inline-flex items-center gap-2 font-mono text-xs tracking-widest text-brand-muted hover:text-brand-text transition-colors uppercase mb-4">
             <ArrowLeft size={12} /> Back to cart
           </Link>
-          <h1 className="font-display text-[clamp(3.5rem,8vw,7rem)] leading-none text-hittamins-text">CHECKOUT</h1>
+          <h1 className="font-display text-[clamp(3.5rem,8vw,7rem)] leading-none text-brand-navy">CHECKOUT</h1>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12 items-start">
@@ -265,13 +265,13 @@ export default function CheckoutPage() {
 
             {/* Contact */}
             <section>
-              <h2 className="font-display text-3xl text-hittamins-text mb-5 pb-3 border-b border-hittamins-border">CONTACT</h2>
+              <h2 className="font-display text-3xl text-brand-navy mb-5 pb-3 border-b border-brand-border">CONTACT</h2>
               <input type="email" required placeholder="Email address" className={inputClass} {...field('email')} />
             </section>
 
             {/* Shipping */}
             <section>
-              <h2 className="font-display text-3xl text-hittamins-text mb-5 pb-3 border-b border-hittamins-border">SHIPPING ADDRESS</h2>
+              <h2 className="font-display text-3xl text-brand-navy mb-5 pb-3 border-b border-brand-border">SHIPPING ADDRESS</h2>
               <div className="space-y-3">
                 <div className="grid grid-cols-2 gap-3">
                   <input required placeholder="First name" className={inputClass} {...field('firstName')} />
@@ -288,25 +288,25 @@ export default function CheckoutPage() {
                       <option key={c}>{c}</option>
                     ))}
                   </select>
-                  <span className="absolute right-4 top-1/2 -translate-y-1/2 text-hittamins-muted pointer-events-none text-xs">▼</span>
+                  <span className="absolute right-4 top-1/2 -translate-y-1/2 text-brand-muted pointer-events-none text-xs">▼</span>
                 </div>
               </div>
             </section>
 
             {/* Payment */}
             <section>
-              <h2 className="font-display text-3xl text-hittamins-text mb-5 pb-3 border-b border-hittamins-border">PAYMENT</h2>
+              <h2 className="font-display text-3xl text-brand-navy mb-5 pb-3 border-b border-brand-border">PAYMENT</h2>
 
               {/* Current payment type bar */}
-              <div className="flex items-center justify-between px-4 py-3 border border-hittamins-border bg-hittamins-dark mb-4">
+              <div className="flex items-center justify-between px-4 py-3 border border-brand-border bg-brand-soft mb-4">
                 <div className="flex items-center gap-3">
                   {selectedOption.badges}
-                  <span className="font-mono text-sm text-hittamins-text">{selectedOption.label}</span>
+                  <span className="font-mono text-sm text-brand-text">{selectedOption.label}</span>
                 </div>
                 <button
                   type="button"
                   onClick={() => setShowPaymentModal(true)}
-                  className="px-4 py-1.5 bg-hittamins-cyan text-black font-mono text-[10px] tracking-widest uppercase rounded-full hover:opacity-80 transition-opacity flex-shrink-0"
+                  className="px-4 py-1.5 bg-brand-blue text-white font-mono text-[10px] tracking-widest uppercase rounded-full hover:opacity-80 transition-opacity flex-shrink-0"
                 >
                   Change
                 </button>
@@ -325,9 +325,9 @@ export default function CheckoutPage() {
               )}
 
               {paymentType === 'paypal' && (
-                <div className="border border-hittamins-border bg-hittamins-dark p-6 text-center">
+                <div className="border border-brand-border bg-brand-soft p-6 text-center">
                   <PayPalBadge />
-                  <p className="font-mono text-xs text-hittamins-muted mt-3 leading-relaxed">
+                  <p className="font-mono text-xs text-brand-muted mt-3 leading-relaxed">
                     You'll be redirected to PayPal to complete your payment securely.
                   </p>
                 </div>
@@ -363,26 +363,26 @@ export default function CheckoutPage() {
 
             <button
               type="submit"
-              className="w-full py-5 font-display text-3xl tracking-widest bg-hittamins-cyan text-black hover:opacity-85 transition-opacity"
+              className="w-full py-5 font-display text-3xl tracking-widest bg-brand-blue text-white hover:opacity-85 transition-opacity"
             >
               COMPLETE ORDER
             </button>
 
-            <p className="font-mono text-[10px] tracking-widest text-hittamins-muted text-center uppercase">
+            <p className="font-mono text-[10px] tracking-widest text-brand-muted text-center uppercase">
               Demo store — no payment will be processed
             </p>
           </form>
 
           {/* ── Order summary ── */}
           <aside className="order-first lg:order-last sticky top-32">
-            <div className="bg-hittamins-dark border border-hittamins-border">
+            <div className="bg-brand-white border border-brand-border">
 
-              <div className="px-6 pt-6 pb-4 border-b border-hittamins-border">
-                <h2 className="font-display text-3xl text-hittamins-text">ORDER SUMMARY</h2>
+              <div className="px-6 pt-6 pb-4 border-b border-brand-border">
+                <h2 className="font-display text-3xl text-brand-navy">ORDER SUMMARY</h2>
               </div>
 
               {/* Items */}
-              <div className="px-6 py-5 space-y-4 border-b border-hittamins-border">
+              <div className="px-6 py-5 space-y-4 border-b border-brand-border">
                 {items.map((item) => (
                   <div key={item.id} className="flex items-start gap-4">
                     <div
@@ -392,11 +392,11 @@ export default function CheckoutPage() {
                       {item.name.charAt(0)}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="font-display text-xl leading-tight text-hittamins-text">{item.name}</p>
-                      <p className="font-mono text-xs text-hittamins-muted mt-0.5">{item.subtitle}</p>
-                      <p className="font-mono text-xs text-hittamins-muted mt-1">x{item.qty}</p>
+                      <p className="font-display text-xl leading-tight text-brand-text">{item.name}</p>
+                      <p className="font-mono text-xs text-brand-muted mt-0.5">{item.subtitle}</p>
+                      <p className="font-mono text-xs text-brand-muted mt-1">x{item.qty}</p>
                     </div>
-                    <p className="font-mono text-sm text-hittamins-text flex-shrink-0">
+                    <p className="font-mono text-sm text-brand-text flex-shrink-0">
                       ${(item.price * item.qty).toFixed(2)}
                     </p>
                   </div>
@@ -404,8 +404,8 @@ export default function CheckoutPage() {
               </div>
 
               {/* Promo */}
-              <div className="px-6 py-5 border-b border-hittamins-border">
-                <p className="font-mono text-[10px] tracking-widest text-hittamins-muted uppercase mb-3 flex items-center gap-2">
+              <div className="px-6 py-5 border-b border-brand-border">
+                <p className="font-mono text-[10px] tracking-widest text-brand-muted uppercase mb-3 flex items-center gap-2">
                   <Tag size={11} /> Promo code
                 </p>
                 <div className="flex gap-2">
@@ -414,48 +414,48 @@ export default function CheckoutPage() {
                     value={promo}
                     onChange={(e) => { setPromo(e.target.value); setPromoState(null) }}
                     placeholder="Enter code"
-                    className="flex-1 bg-hittamins-black border border-hittamins-border px-4 py-2.5 font-mono text-sm text-hittamins-text placeholder:text-hittamins-muted/40 focus:outline-none focus:border-hittamins-green transition-colors"
+                    className="flex-1 bg-brand-light border border-brand-border px-4 py-2.5 font-mono text-sm text-brand-text placeholder:text-brand-muted/40 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-colors"
                   />
                   <button
                     type="button"
                     onClick={handlePromo}
-                    className="px-5 py-2.5 border border-hittamins-cyan text-hittamins-cyan font-mono text-[10px] tracking-widest uppercase hover:bg-hittamins-cyan hover:text-black transition-all"
+                    className="px-5 py-2.5 border border-brand-blue text-brand-blue font-mono text-[10px] tracking-widest uppercase hover:bg-brand-blue hover:text-white transition-all"
                   >
                     Apply
                   </button>
                 </div>
-                {promoState === 'applied' && <p className="font-mono text-xs text-hittamins-green mt-2">✓ HITTAMINS10 — 10% off applied</p>}
-                {promoState === 'invalid' && <p className="font-mono text-xs text-hittamins-red mt-2">Invalid promo code</p>}
+                {promoState === 'applied' && <p className="font-mono text-xs text-brand-mint mt-2">✓ HITTAMINS10 — 10% off applied</p>}
+                {promoState === 'invalid' && <p className="font-mono text-xs text-red-500 mt-2">Invalid promo code</p>}
               </div>
 
               {/* Totals */}
-              <div className="px-6 py-5 space-y-3 border-b border-hittamins-border">
+              <div className="px-6 py-5 space-y-3 border-b border-brand-border">
                 <div className="flex justify-between font-mono text-sm">
-                  <span className="text-hittamins-muted">Subtotal ({itemCount} {itemCount === 1 ? 'item' : 'items'})</span>
-                  <span className="text-hittamins-text">${total.toFixed(2)}</span>
+                  <span className="text-brand-muted">Subtotal ({itemCount} {itemCount === 1 ? 'item' : 'items'})</span>
+                  <span className="text-brand-text">${total.toFixed(2)}</span>
                 </div>
                 {discount > 0 && (
                   <div className="flex justify-between font-mono text-sm">
-                    <span className="text-hittamins-green">Discount (10%)</span>
-                    <span className="text-hittamins-green">−${discount.toFixed(2)}</span>
+                    <span className="text-brand-mint">Discount (10%)</span>
+                    <span className="text-brand-mint">−${discount.toFixed(2)}</span>
                   </div>
                 )}
                 <div className="flex justify-between font-mono text-sm">
-                  <span className="text-hittamins-muted">Shipping</span>
-                  <span className="text-hittamins-text">${shipping.toFixed(2)}</span>
+                  <span className="text-brand-muted">Shipping</span>
+                  <span className="text-brand-text">${shipping.toFixed(2)}</span>
                 </div>
               </div>
 
-              <div className="px-6 py-5 flex items-center justify-between border-b border-hittamins-border">
-                <span className="font-mono text-xs tracking-widest text-hittamins-muted uppercase">Total to pay</span>
-                <span className="font-display text-4xl text-hittamins-cyan">${grandTotal.toFixed(2)}</span>
+              <div className="px-6 py-5 flex items-center justify-between border-b border-brand-border">
+                <span className="font-mono text-xs tracking-widest text-brand-muted uppercase">Total to pay</span>
+                <span className="font-display text-4xl text-brand-blue">${grandTotal.toFixed(2)}</span>
               </div>
 
               <div className="px-6 py-4 flex items-center gap-3">
-                <Shield size={15} className="text-hittamins-green flex-shrink-0" />
-                <p className="font-mono text-xs text-hittamins-muted leading-relaxed">
+                <Shield size={15} className="text-brand-mint flex-shrink-0" />
+                <p className="font-mono text-xs text-brand-muted leading-relaxed">
                   Secure checkout. Natural ingredients.{' '}
-                  <span className="text-hittamins-text font-bold">Real recovery.</span>
+                  <span className="text-brand-text font-bold">Real recovery.</span>
                 </p>
               </div>
             </div>

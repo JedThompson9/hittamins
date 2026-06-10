@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${inter.variable} ${spaceMono.variable} font-body bg-hittamins-black text-hittamins-text antialiased`}
+        className={`${bebasNeue.variable} ${inter.variable} ${spaceMono.variable} font-body bg-brand-light text-brand-text antialiased`}
       >
         <CartProvider>
           <SmoothScrollProvider>

@@ -14,12 +14,12 @@ const PILLARS = [
   {
     label: 'BUILT FOR PERFORMANCE',
     body: 'Designed around real training demands — not marketing copy.',
-    colour: '#3ECFCF',
+    colour: '#4A90C4',
   },
   {
     label: 'REAL RECOVERY',
     body: 'Backed by what actually works. Honest formulations. Full stop.',
-    colour: '#1A8FFF',
+    colour: '#5BA8A0',
   },
 ]
 
@@ -64,9 +64,9 @@ export default function WhyHittamins() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-hittamins-dark border-t border-hittamins-border">
+    <section ref={sectionRef} className="py-24 px-6 bg-brand-soft border-t border-brand-border">
       <div className="max-w-7xl mx-auto">
-        <h2 className="why-heading font-display text-6xl md:text-8xl text-hittamins-text mb-16">
+        <h2 className="why-heading font-display text-6xl md:text-8xl text-brand-navy mb-16">
           WHY HITTAMINS
         </h2>
 
@@ -74,7 +74,7 @@ export default function WhyHittamins() {
           {PILLARS.map((pillar) => (
             <div
               key={pillar.label}
-              className="why-pillar border border-hittamins-border p-8 hover:border-white/20 transition-colors duration-300"
+              className="why-pillar bg-brand-white border border-brand-border p-8 hover:border-brand-blue/40 transition-colors duration-300"
             >
               <div
                 className="w-8 h-1 mb-6"
@@ -86,7 +86,7 @@ export default function WhyHittamins() {
               >
                 {pillar.label}
               </h3>
-              <p className="text-hittamins-muted text-sm leading-relaxed">{pillar.body}</p>
+              <p className="text-brand-muted text-sm leading-relaxed">{pillar.body}</p>
             </div>
           ))}
         </div>

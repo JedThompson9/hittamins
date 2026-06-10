@@ -42,7 +42,7 @@ export default function BuiltForIcons() {
       {ICONS.map((icon) => (
         <div key={icon.label} className="built-for-item flex flex-col items-center gap-3">
           <span className="text-5xl">{icon.emoji}</span>
-          <span className="font-mono text-xs text-hittamins-muted tracking-widest uppercase text-center">
+          <span className="font-mono text-xs text-brand-muted tracking-widest uppercase text-center">
             {icon.label}
           </span>
         </div>

@@ -54,13 +54,13 @@ export default function FeaturedProducts() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 bg-hittamins-black border-t border-hittamins-border">
+    <section ref={sectionRef} className="py-24 px-6 bg-brand-light border-t border-brand-border">
       <div className="max-w-7xl mx-auto">
         <div className="featured-heading flex items-end justify-between mb-12 flex-wrap gap-4">
-          <h2 className="font-display text-6xl md:text-8xl text-hittamins-text">FEATURED</h2>
+          <h2 className="font-display text-6xl md:text-8xl text-brand-navy">FEATURED</h2>
           <a
             href="/products"
-            className="font-mono text-xs tracking-widest text-hittamins-muted hover:text-hittamins-green transition-colors uppercase underline underline-offset-4"
+            className="font-mono text-xs tracking-widest text-brand-muted hover:text-brand-blue transition-colors uppercase underline underline-offset-4"
           >
             View All Products
           </a>
