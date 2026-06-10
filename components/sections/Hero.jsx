@@ -29,7 +29,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section ref={heroRef} className="relative w-full h-screen min-h-[600px] overflow-hidden">
+    <section ref={heroRef} className="relative w-full h-[70vh] md:h-screen min-h-[500px] overflow-hidden">
 
       {/* ── Background image ──────────────────────────────────────────────── */}
       {/*  Place your hero photo at /public/hero/hero.jpg and swap the div    */}
@@ -79,7 +79,7 @@ export default function Hero() {
 
       {/* ── Content — anchored bottom-left, top-clamped below the nav ──────── */}
       {/* pt-36 = 144px clears announcement bar (~34px) + navbar (~96px)       */}
-      <div className="absolute inset-0 flex items-end pt-36 overflow-hidden">
+      <div className="absolute inset-0 flex items-center md:items-end pt-44 md:pt-36 overflow-hidden">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-10 pb-14 md:pb-20">
           <div className="max-w-lg">
 
@@ -104,16 +104,16 @@ export default function Hero() {
             </p>
 
             {/* CTA buttons — pill style like Puresport */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 items-center">
               <Link
                 href="/products/beating-black-blue"
-                className="hero-cta inline-block px-7 py-3.5 bg-white text-black font-display text-2xl rounded-full hover:bg-hittamins-cyan transition-colors duration-200"
+                className="hero-cta inline-block px-6 py-3 bg-white text-black font-display text-xl md:text-2xl rounded-full hover:bg-hittamins-cyan transition-colors duration-200 whitespace-nowrap"
               >
                 SHOP MUSCLE RUB
               </Link>
               <Link
                 href="/products"
-                className="hero-cta inline-block px-7 py-3.5 border border-white/40 text-white font-display text-2xl rounded-full hover:bg-white/10 hover:border-white/70 transition-colors duration-200"
+                className="hero-cta inline-block px-6 py-3 border border-white/40 text-white font-display text-xl md:text-2xl rounded-full hover:bg-white/10 hover:border-white/70 transition-colors duration-200 whitespace-nowrap"
               >
                 ALL PRODUCTS
               </Link>
