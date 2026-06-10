@@ -51,12 +51,14 @@ export default function Navbar() {
         {/* Animated logo */}
         <Link href="/" className="nav-item flex items-center hover:opacity-80 transition-opacity">
           <video
-            src="/logo/logo.webm"
             autoPlay
             muted
             playsInline
             className="h-28 w-auto object-contain"
-          />
+          >
+            <source src="/logo/logo-safari.mov" type="video/quicktime" />
+            <source src="/logo/logo.webm" type="video/webm" />
+          </video>
         </Link>
 
         {/* Desktop links — centered */}
