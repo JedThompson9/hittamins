@@ -56,7 +56,7 @@ export default function Navbar() {
           Free UK shipping on all orders →
         </div>
 
-        <nav className="max-w-7xl mx-auto pl-0 pr-1 md:pl-0 md:pr-6 h-16 pb-3 md:pb-0 flex items-center justify-between md:grid md:grid-cols-3">
+        <nav className="max-w-7xl mx-auto pl-0 pr-1 md:pl-0 md:pr-6 h-24 pt-3 pb-3 md:h-16 md:pt-0 md:pb-0 flex items-center justify-between md:grid md:grid-cols-3">
 
           {/* Animated logo */}
           <Link href="/" className="nav-item -ml-[37px] mt-2 md:mt-0 mr-auto flex items-center hover:opacity-80 transition-opacity md:-ml-[31px] md:mr-0 md:justify-self-start">
