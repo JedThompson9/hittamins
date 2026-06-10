@@ -46,9 +46,9 @@ export default function Navbar() {
       <header
         ref={navRef}
         className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
-          scrolled || menuOpen
-            ? 'bg-brand-white/95 backdrop-blur-md border-b border-brand-border'
-            : 'bg-transparent'
+          scrolled
+            ? 'bg-white/20 backdrop-blur-sm md:bg-brand-white/95 md:border-b md:border-brand-border'
+            : ''
         }`}
       >
         {/* Announcement bar */}
@@ -56,11 +56,11 @@ export default function Navbar() {
           Free UK shipping on all orders →
         </div>
 
-        <nav className="max-w-7xl mx-auto pl-0 pr-1 md:pl-0 md:pr-6 h-16 flex items-center justify-between md:grid md:grid-cols-3">
+        <nav className="max-w-7xl mx-auto pl-0 pr-1 md:pl-0 md:pr-6 h-16 pb-3 md:pb-0 flex items-center justify-between md:grid md:grid-cols-3">
 
           {/* Animated logo */}
-          <Link href="/" className="nav-item -ml-[38px] mr-auto flex items-center hover:opacity-80 transition-opacity md:-ml-[31px] md:mr-0 md:justify-self-start">
-            <LogoPlayer className={`w-auto object-contain transition-all duration-500 ease-in-out ${scrolled ? 'h-16' : 'h-32'}`} />
+          <Link href="/" className="nav-item -ml-[37px] mt-2 md:mt-0 mr-auto flex items-center hover:opacity-80 transition-opacity md:-ml-[31px] md:mr-0 md:justify-self-start">
+            <LogoPlayer className={`w-auto object-contain transition-all duration-500 ease-in-out h-28 ${scrolled ? 'md:h-16' : 'md:h-32'}`} />
           </Link>
 
           {/* Desktop links — centered */}
