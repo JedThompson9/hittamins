@@ -208,6 +208,7 @@ export default function CheckoutPage() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setSubmitted(true)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   if (submitted) {

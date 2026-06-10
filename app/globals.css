@@ -36,6 +36,13 @@ html.lenis {
   will-change: transform, opacity;
 }
 
+/* Prevent iOS Safari auto-zoom on input focus */
+@media screen and (max-width: 767px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
