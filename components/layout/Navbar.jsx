@@ -55,15 +55,15 @@ export default function Navbar() {
           Free UK shipping on all orders →
         </div>
 
-        <nav className="max-w-7xl mx-auto px-1 md:px-6 h-24 flex items-center justify-between md:grid md:grid-cols-3">
+        <nav className="max-w-7xl mx-auto pl-0 pr-1 md:px-6 h-24 flex items-center justify-between md:grid md:grid-cols-3">
 
           {/* Animated logo */}
-          <Link href="/" className="nav-item mr-auto flex items-center hover:opacity-80 transition-opacity md:mr-0 md:justify-self-start">
+          <Link href="/" className="nav-item -ml-6 mr-auto flex items-center hover:opacity-80 transition-opacity md:ml-0 md:mr-0 md:justify-self-start">
             <video
               autoPlay
               muted
               playsInline
-              className="h-20 md:h-28 w-auto object-contain"
+              className="h-28 w-auto object-contain"
             >
               <source src="/logo/logo-safari.mov" type="video/quicktime" />
               <source src="/logo/logo.webm" type="video/webm" />
