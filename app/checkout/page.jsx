@@ -10,49 +10,48 @@ const SHIPPING = 4.99
 
 function VisaBadge() {
   return (
-    <div className="flex items-center justify-center w-12 h-7 bg-[#1434CB] rounded px-1.5">
-      <span className="text-white font-bold text-xs italic tracking-wider">VISA</span>
+    <div className="flex items-center justify-center w-14 h-8 bg-white border border-brand-border rounded">
+      <span className="font-black text-sm italic tracking-wider text-[#1434CB]">VISA</span>
     </div>
   )
 }
 
 function MastercardBadge() {
   return (
-    <div className="relative flex items-center justify-center w-12 h-7 bg-white border border-brand-border rounded overflow-hidden flex-shrink-0">
-      <div className="absolute left-1.5 w-4 h-4 rounded-full bg-[#EB001B]" />
-      <div className="absolute right-1.5 w-4 h-4 rounded-full bg-[#F79E1B] mix-blend-screen" />
+    <div className="relative flex items-center justify-center w-14 h-8 bg-white border border-brand-border rounded overflow-hidden flex-shrink-0">
+      <div className="absolute left-2 w-5 h-5 rounded-full bg-[#EB001B] opacity-90" />
+      <div className="absolute left-[18px] w-5 h-5 rounded-full bg-[#F79E1B] opacity-90" />
     </div>
   )
 }
 
 function PayPalBadge() {
   return (
-    <div className="flex items-center justify-center w-12 h-7 bg-[#009CDE] rounded px-1.5">
-      <span className="text-white font-bold text-xs tracking-tight">Pay</span>
-      <span className="text-[#003087] font-bold text-xs tracking-tight">Pal</span>
+    <div className="flex items-center justify-center w-14 h-8 bg-white border border-brand-border rounded px-1.5">
+      <span className="font-black text-xs italic">
+        <span className="text-[#003087]">Pay</span>
+        <span className="text-[#009CDE]">Pal</span>
+      </span>
     </div>
   )
 }
 
 function ApplePayBadge() {
   return (
-    <div className="flex items-center justify-center w-12 h-7 bg-black rounded border border-white/20">
-      <span className="text-white text-xs font-semibold tracking-tight"> Pay</span>
+    <div className="flex items-center justify-center gap-1 w-16 h-8 bg-black rounded px-2">
+      <svg viewBox="0 0 14 17" className="w-3 h-3 fill-white flex-shrink-0">
+        <path d="M13.17 5.9c-.08.06-1.52.88-1.52 2.69 0 2.1 1.84 2.84 1.9 2.86-.02.06-.3 1.02-.98 2-.6.88-1.22 1.76-2.2 1.76s-1.24-.58-2.36-.58c-1.1 0-1.48.6-2.4.6s-1.5-.84-2.22-1.86C2.58 12.1 1.84 10.04 1.84 8.08c0-3.06 2-4.68 3.94-4.68 1.04 0 1.9.68 2.56.68.62 0 1.6-.72 2.8-.72.46 0 1.66.04 2.52 1.26v.28h.01zm-3.3-2.32c.48-.58.82-1.38.82-2.18 0-.1-.01-.22-.02-.32-.78.03-1.72.52-2.28 1.18-.44.5-.84 1.3-.84 2.1 0 .12.02.24.02.28.06.01.14.02.22.02.7 0 1.6-.46 2.08-1.08z" />
+      </svg>
+      <span className="text-white text-[11px] font-semibold tracking-tight">Pay</span>
     </div>
   )
 }
 
 function GooglePayBadge() {
   return (
-    <div className="flex items-center justify-center w-12 h-7 bg-white rounded px-1 border border-brand-border">
-      <span className="font-bold text-[10px]">
-        <span className="text-[#4285F4]">G</span>
-        <span className="text-[#EA4335]">o</span>
-        <span className="text-[#FBBC05]">o</span>
-        <span className="text-[#4285F4]">g</span>
-        <span className="text-[#34A853]">l</span>
-        <span className="text-[#EA4335]">e</span>
-      </span>
+    <div className="flex items-center justify-center gap-0.5 w-16 h-8 bg-white border border-brand-border rounded px-2">
+      <span className="font-bold text-xs text-[#4285F4]">G</span>
+      <span className="text-[10px] text-brand-text font-medium">Pay</span>
     </div>
   )
 }
@@ -169,6 +168,26 @@ export default function CheckoutPage() {
     email: '', firstName: '', lastName: '',
     address: '', city: '', postcode: '', country: 'United Kingdom',
   })
+
+  const [card, setCard] = useState({ number: '', name: '', expiry: '', cvv: '' })
+
+  const formatCardNumber = (val) =>
+    val.replace(/\D/g, '').slice(0, 16).replace(/(.{4})/g, '$1 ').trim()
+
+  const formatExpiry = (val) => {
+    const digits = val.replace(/\D/g, '').slice(0, 4)
+    if (digits.length >= 3) return digits.slice(0, 2) + ' / ' + digits.slice(2)
+    if (digits.length === 2 && !val.includes('/')) return digits + ' / '
+    return digits
+  }
+
+  const handleCard = (field, raw) => {
+    let value = raw
+    if (field === 'number') value = formatCardNumber(raw)
+    if (field === 'expiry') value = formatExpiry(raw)
+    if (field === 'cvv') value = raw.replace(/\D/g, '').slice(0, 4)
+    setCard((c) => ({ ...c, [field]: value }))
+  }
 
   // Detect Apple Pay and Google Pay availability client-side
   useEffect(() => {
@@ -316,11 +335,43 @@ export default function CheckoutPage() {
               {/* Conditional payment fields */}
               {paymentType === 'card' && (
                 <div className="space-y-3">
-                  <input placeholder="Card number" inputMode="numeric" maxLength={19} className={inputClass} />
-                  <input placeholder="Name on card" className={inputClass} />
+                  <div className="relative">
+                    <input
+                      placeholder="1234 5678 9012 3456"
+                      inputMode="numeric"
+                      value={card.number}
+                      onChange={(e) => handleCard('number', e.target.value)}
+                      maxLength={19}
+                      className={inputClass}
+                    />
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 flex gap-1">
+                      <VisaBadge />
+                      <MastercardBadge />
+                    </div>
+                  </div>
+                  <input
+                    placeholder="Name on card"
+                    value={card.name}
+                    onChange={(e) => handleCard('name', e.target.value)}
+                    className={inputClass}
+                  />
                   <div className="grid grid-cols-2 gap-3">
-                    <input placeholder="MM / YY" className={inputClass} />
-                    <input placeholder="CVV" maxLength={4} className={inputClass} />
+                    <input
+                      placeholder="MM / YY"
+                      inputMode="numeric"
+                      value={card.expiry}
+                      onChange={(e) => handleCard('expiry', e.target.value)}
+                      maxLength={7}
+                      className={inputClass}
+                    />
+                    <input
+                      placeholder="CVV"
+                      inputMode="numeric"
+                      value={card.cvv}
+                      onChange={(e) => handleCard('cvv', e.target.value)}
+                      maxLength={4}
+                      className={inputClass}
+                    />
                   </div>
                 </div>
               )}
