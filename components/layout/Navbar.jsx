@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import LogoPlayer from '@/components/ui/LogoPlayer'
 import { ShoppingBag, Menu, X } from 'lucide-react'
 import { gsap } from 'gsap'
 import { useCart } from '@/components/cart/CartContext'
@@ -59,15 +60,7 @@ export default function Navbar() {
 
           {/* Animated logo */}
           <Link href="/" className="nav-item -ml-[38px] mr-auto flex items-center hover:opacity-80 transition-opacity md:ml-0 md:mr-0 md:justify-self-start">
-            <video
-              autoPlay
-              muted
-              playsInline
-              className="h-28 w-auto object-contain"
-            >
-              <source src="/logo/logo-safari.mov" type="video/quicktime" />
-              <source src="/logo/logo.webm" type="video/webm" />
-            </video>
+            <LogoPlayer className="h-28 w-auto object-contain" />
           </Link>
 
           {/* Desktop links — centered */}
