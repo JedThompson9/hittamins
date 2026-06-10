@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { ShoppingBag, Menu, X } from 'lucide-react'
 import { gsap } from 'gsap'
@@ -42,21 +41,26 @@ export default function Navbar() {
         scrolled ? 'bg-hittamins-black/95 backdrop-blur-md border-b border-hittamins-border' : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-        {/* Logo */}
+      {/* Announcement bar */}
+      <div className="nav-item w-full bg-hittamins-cyan text-hittamins-black py-2 text-center font-mono text-[10px] tracking-[0.28em] uppercase">
+        Free UK shipping on all orders →
+      </div>
+
+      <nav className="max-w-7xl mx-auto px-6 h-24 grid grid-cols-3 items-center">
+
+        {/* Animated logo */}
         <Link href="/" className="nav-item flex items-center hover:opacity-80 transition-opacity">
-          <Image
-            src="/logo/hittamins-logo.png"
-            alt="Hittamins"
-            width={360}
-            height={144}
-            className="object-contain h-20 w-auto"
-            priority
+          <video
+            src="/logo/logo.webm"
+            autoPlay
+            muted
+            playsInline
+            className="h-28 w-auto object-contain"
           />
         </Link>
 
-        {/* Desktop links */}
-        <div className="nav-item hidden md:flex items-center gap-8">
+        {/* Desktop links — centered */}
+        <div className="nav-item hidden md:flex items-center justify-center gap-8">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -69,7 +73,7 @@ export default function Navbar() {
         </div>
 
         {/* Cart + mobile menu */}
-        <div className="nav-item flex items-center gap-4">
+        <div className="nav-item flex items-center justify-end gap-4">
           <button
             onClick={() => setIsOpen(true)}
             className="relative p-2 text-hittamins-muted hover:text-hittamins-text transition-colors"
